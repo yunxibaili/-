@@ -1,0 +1,27 @@
+appium:
+  host: "127.0.0.1"
+  port: 4723
+  timeout: 30
+  
+capabilities:
+  platformName: "Android"
+  deviceName: "emulator-5554"
+  appPackage: "com.game.package"
+  appActivity: ".MainActivity"
+  noReset: true
+  autoGrantPermissions: true
+  screenshotWaitTimeout: 10
+  imageMatchThreshold: 0.8
+
+test:
+  retry_count: 2
+  screenshot_on_failure: true
+  screenshot_dir: "reports/screenshots"
+  
+keywords:
+  click_image:
+    timeout: 10
+    threshold: 0.8
+  exists:
+    timeout: 30
+    check_interval: 1
